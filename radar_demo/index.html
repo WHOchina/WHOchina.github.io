@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>China Healthy Cities</title>
+   
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>China Healthy Cities</h1>
+      <h2>What are Chinese cities doing to meet Healthy City 2030 goals?</h2>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+<canvas id="myChart" width=500 height=500></canvas>
+    </div>
+    <!-- blue buttons -->
+    <button class="button1" id="Beijing" onclick="set_beijing()">Beijing</button>
+    <button class="button1" id="Hangzhou" onclick="set_hangzhou()">Hangzhou</button>
+    <button class="button1" id="Hangzhou" onclick="set_chengdu()">Chengdu</button>
+    <button class="button1" id="Hangzhou" onclick="set_shanghai()">Shanghai</button>
+    <br /> <br />
+    </div>
+    <!-- orange buttons -->
+    <button class="button2" id="Beijing" onclick="set_beijing2()">Beijing</button>
+    <button class="button2" id="Hangzhou" onclick="set_hangzhou2()">Hangzhou</button>
+    <button class="button2" id="Hangzhou" onclick="set_chengdu2()">Chengdu</button>
+    <button class="button2" id="Hangzhou" onclick="set_shanghai2()">Shanghai</button>
+
+    <script>
+    //blue buttons
+    function set_beijing() {
+        myChart.config.data.datasets[0].data = [10,2,3,4,7,10];
+        myChart.config.data.datasets[0].label = "Beijing";
+        window.myChart.update()
+    }
+    function set_hangzhou() {
+        myChart.config.data.datasets[0].data = [3,7,9,6,5,3];
+        myChart.config.data.datasets[0].label = "Hangzhou";
+        window.myChart.update()
+    }
+    function set_chengdu() {
+        myChart.config.data.datasets[0].data = [2,8,7,3,6,2];
+        myChart.config.data.datasets[0].label = "Chengdu";
+        window.myChart.update()
+    }
+    function set_shanghai() {
+        myChart.config.data.datasets[0].data = [8,7,6,7,8,8];
+        myChart.config.data.datasets[0].label = "Shanghai";
+        window.myChart.update()
+    }
+
+    </script>
+    <script>
+    //orange buttons
+    function set_beijing2() {
+        myChart.config.data.datasets[1].data = [10,2,3,4,7,10];
+        myChart.config.data.datasets[1].label = "Beijing";
+        window.myChart.update()
+    }
+    function set_hangzhou2() {
+        myChart.config.data.datasets[1].data = [3,7,9,6,5,3];
+        myChart.config.data.datasets[1].label = "Hangzhou";
+        window.myChart.update()
+    }
+    function set_chengdu2() {
+        myChart.config.data.datasets[1].data = [2,8,7,3,6,2];
+        myChart.config.data.datasets[1].label = "Chengdu";
+        window.myChart.update()
+    }
+    function set_shanghai2() {
+        myChart.config.data.datasets[1].data = [8,7,6,7,8,8];
+        myChart.config.data.datasets[1].label = "Shanghai";
+        window.myChart.update()
+    }
+    </script>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
