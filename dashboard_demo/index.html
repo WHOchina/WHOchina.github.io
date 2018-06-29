@@ -19,7 +19,7 @@
   <!-- Dashboard -->
   <link rel="stylesheet" type="text/css" href="../../assets/css/keen-dashboards.css" />
 </head>
-<body class="keen-dashboard" style="padding-top: 30px;">
+<body class="keen-dashboard" style="padding-top: 20px;">
 
 <!--
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -115,8 +115,8 @@
 
           <div class="chart-stage">
             <div class="wrapper">
-              <h1>Policy Checklist</h1>
-              <h2>What are Chinese cities doing to meet Healthy City 2030 goals?</h2>
+              <h1 id=cityname2>Policy Checklist for Beijing </h1>
+              <h2>What is the city doing to meet Healthy City 2030 goals?</h2>
               <br> <br>
             <ol>
               <li><span>
@@ -143,8 +143,7 @@
 
               <li><span>
                 <div class="w3-animate-top hide" id="policy_score">
-                2/4
-              </span><p2>Recommended Healthy City Policies </p2></li>
+                1/4</span><p2>   Recommended Healthy City Policies </p2></li>
             </div>
             </ol>
           </div>
@@ -159,11 +158,12 @@
       <div class="col-sm-12">
         <div class="chart-wrapper">
           <div class="chart-title">
-
+            <br><br>
+            <h1>More information about the China Healthy Cities movement: </h1> <br> <br>
 
           </div>
           <div class="chart-stage">
-            <p> <!--placeholder --> </p>
+
           </div>
 
         </div>
@@ -173,7 +173,7 @@
 
     <script type="text/javascript">
        var refresh_policy = function(mask) {
-         mask = [1,1,0,0];
+         mask = [1,1,0,1];
 
          setTimeout(function() { c1.checked = 1 ; c1.indeterminate = mask[0]}, 200)
          setTimeout(function() { c2.checked = 1 ; c2.indeterminate = mask[1]}, 500)

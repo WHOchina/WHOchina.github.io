@@ -1,15 +1,5 @@
 var ctx = document.getElementById("myChart");
 
-var refresh_policy = function(mask) {
-  mask = [1,0,1,0];
-  total_policy = console.log(mask.reduce((a, b) => a + b, 0));
-  setTimeout(function() { c1.checked = 1 ; c1.indeterminate = mask[0]}, 200)
-  setTimeout(function() { c2.checked = 1 ; c2.indeterminate = mask[1]}, 500)
-  setTimeout(function() { c3.checked = 1; c3.indeterminate = mask[2]}, 800)
-  setTimeout(function() { c4.checked = 1; c4.indeterminate = mask[3]}, 1000)
-  setTimeout(function() { document.getElementById("policy_score").classList.remove('hide') }, 1000)
-}
-window.onload = refresh_policy;
 
 var myChart = new Chart(ctx, {
   type: 'radar',
@@ -60,26 +50,48 @@ var myChart = new Chart(ctx, {
         myChart.config.data.datasets[0].data = [10,2,3,4,7, 3, 10];
         myChart.config.data.datasets[0].label = "Beijing";
         document.getElementById('cityname1').innerHTML = 'Beijing';
-
+        document.getElementById('cityname2').innerHTML = 'Policy Checklist for Beijing';
+        document.getElementById("policy_score").innerHTML = '1/4</span><p2>   Recommended Healthy City Policies </p2></li>';
+        c1.indeterminate = 1;
+        c2.indeterminate = 1;
+        c3.indeterminate = 0;
+        c4.indeterminate = 1;
         window.myChart.update()
     }
     function set_hangzhou() {
         myChart.config.data.datasets[0].data = [3,7,9,6,5,8,3];
         myChart.config.data.datasets[0].label = "Hangzhou";
         document.getElementById('cityname1').innerHTML = 'Hangzhou';
-        mask = [0,0,0,0];
+        document.getElementById('cityname2').innerHTML = 'Policy Checklist for Hangzhou';
+        document.getElementById("policy_score").innerHTML = '2/4</span><p2>   Recommended Healthy City Policies </p2></li>';
+        c1.indeterminate = 0;
+        c2.indeterminate = 0;
+        c3.indeterminate = 1;
+        c4.indeterminate = 1;
         window.myChart.update()
     }
     function set_chengdu() {
         myChart.config.data.datasets[0].data = [2,8,7,3,6,8,2];
         myChart.config.data.datasets[0].label = "Chengdu";
         document.getElementById('cityname1').innerHTML = 'Chengdu';
+        document.getElementById('cityname2').innerHTML = 'Policy Checklist for Chengdu';
+        document.getElementById("policy_score").innerHTML = '3/4</span><p2>   Recommended Healthy City Policies </p2></li>';
+        c1.indeterminate = 0;
+        c2.indeterminate = 0;
+        c3.indeterminate = 0;
+        c4.indeterminate = 1;
         window.myChart.update()
     }
     function set_shanghai() {
         myChart.config.data.datasets[0].data = [8,7,6,7,8, 6, 8];
         myChart.config.data.datasets[0].label = "Shanghai";
         document.getElementById('cityname1').innerHTML = 'Shanghai';
+        document.getElementById('cityname2').innerHTML = 'Policy Checklist for Shanghai';
+        document.getElementById("policy_score").innerHTML = '2/4</span><p2>   Recommended Healthy City Policies </p2></li>';
+        c1.indeterminate = 1;
+        c2.indeterminate = 0;
+        c3.indeterminate = 1;
+        c4.indeterminate = 0;
         window.myChart.update()
     }
 
