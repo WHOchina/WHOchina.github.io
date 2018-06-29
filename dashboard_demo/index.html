@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Layouts &raquo; Two-and-One</title>
+  <title>WHO Healthy Cities Dashboard Demo</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
   <!-- Demo Dependencies -->
@@ -19,7 +19,7 @@
   <!-- Dashboard -->
   <link rel="stylesheet" type="text/css" href="../../assets/css/keen-dashboards.css" />
 </head>
-<body class="keen-dashboard" style="padding-top: 80px;">
+<body class="keen-dashboard" style="padding-top: 30px;">
 
 <!--
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,6 +45,24 @@
     </div>
   </div>
 -->
+
+
+  <div>
+    <h3>China Healthy Cities Platform</h3>
+    <br>
+  </div>
+
+
+<div class = "center">
+
+
+<button class="button1" id="Beijing" onclick="set_beijing()">Beijing</button>
+<button class="button1" id="Hangzhou" onclick="set_hangzhou()">Hangzhou</button>
+<button class="button1" id="Chengdu" onclick="set_chengdu()">Chengdu</button>
+<button class="button1" id="Shanghai" onclick="set_shanghai()">Shanghai</button>
+
+</div>
+
   <div class="container-fluid">
     <div class="row">
 
@@ -58,73 +76,30 @@
             </head>
             <body>
               <div class="wrapper">
-                <h1>City Health Indicators</h1>
-                <h2>What does the data show about how healthy China's cities are?</h2>
+                <h1 id=cityname1> Beijing </h1>
+                <h2>City Health Indicators</h2>
           <div class = "center">
 
           <canvas id="myChart" width=500 height=500></canvas>
               </div>
-              <!-- blue buttons -->
+
               <div class = "center">
+                <!-- blue buttons
               <button class="button1" id="Beijing" onclick="set_beijing()">Beijing</button>
               <button class="button1" id="Hangzhou" onclick="set_hangzhou()">Hangzhou</button>
               <button class="button1" id="Chengdu" onclick="set_chengdu()">Chengdu</button>
               <button class="button1" id="Shanghai" onclick="set_shanghai()">Shanghai</button>
               <br /> <br />
-
+ -->
               <!-- orange buttons -->
+              <p>Choose a city for comparison:</p>
               <button class="button2" id="Beijing2" onclick="set_beijing2()">Beijing</button>
               <button class="button2" id="Hangzhou2" onclick="set_hangzhou2()">Hangzhou</button>
               <button class="button2" id="Chengdu2" onclick="set_chengdu2()">Chengdu</button>
               <button class="button2" id="Shanghai2" onclick="set_shanghai2()">Shanghai</button>
+              <button class="button2" id="set_none" onclick="set_none()">None</button>
               </div>
-              <script>
-              //blue buttons
-              function set_beijing() {
-                  myChart.config.data.datasets[0].data = [10,2,3,4,7, 3, 10];
-                  myChart.config.data.datasets[0].label = "Beijing";
-                  window.myChart.update()
-              }
-              function set_hangzhou() {
-                  myChart.config.data.datasets[0].data = [3,7,9,6,5,8,3];
-                  myChart.config.data.datasets[0].label = "Hangzhou";
-                  window.myChart.update()
-              }
-              function set_chengdu() {
-                  myChart.config.data.datasets[0].data = [2,8,7,3,6,8,2];
-                  myChart.config.data.datasets[0].label = "Chengdu";
-                  window.myChart.update()
-              }
-              function set_shanghai() {
-                  myChart.config.data.datasets[0].data = [8,7,6,7,8, 6, 8];
-                  myChart.config.data.datasets[0].label = "Shanghai";
-                  window.myChart.update()
-              }
 
-              </script>
-              <script>
-              //orange buttons
-              function set_beijing2() {
-                  myChart.config.data.datasets[1].data = [10,2,3,4,7,3,10];
-                  myChart.config.data.datasets[1].label = "Beijing";
-                  window.myChart.update()
-              }
-              function set_hangzhou2() {
-                  myChart.config.data.datasets[1].data = [3,7,9,6,5,8,3];
-                  myChart.config.data.datasets[1].label = "Hangzhou";
-                  window.myChart.update()
-              }
-              function set_chengdu2() {
-                  myChart.config.data.datasets[1].data = [2,8,7,3,6,8,2];
-                  myChart.config.data.datasets[1].label = "Chengdu";
-                  window.myChart.update()
-              }
-              function set_shanghai2() {
-                  myChart.config.data.datasets[1].data = [8,7,6,7,8, 6, 8];
-                  myChart.config.data.datasets[1].label = "Shanghai";
-                  window.myChart.update()
-              }
-              </script>
 
               <script src="script.js"></script>
             </body>
@@ -157,13 +132,18 @@
               </span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet. Curabitur aliquet orci sit amet est posuere consectetur.  </p></li>
 
               <li><span>
-                <input id="c3" type="checkbox" onclick="return false;"/>
+                <input id="c3" type="checkbox" class="green_check" onclick="return false;"/>
                 <label for="c3"><span></span></label>
               </span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet. Curabitur aliquet orci sit amet est posuere consectetur.  </p></li>
 
               <li><span>
+                <input id="c4" type="checkbox" onclick="return false;"/>
+                <label for="c4"><span></span></label>
+              </span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet. Curabitur aliquet orci sit amet est posuere consectetur.  </p></li>
+
+              <li><span>
                 <div class="w3-animate-top hide" id="policy_score">
-                0/3
+                2/4
               </span><p2>Recommended Healthy City Policies </p2></li>
             </div>
             </ol>
@@ -179,24 +159,36 @@
       <div class="col-sm-12">
         <div class="chart-wrapper">
           <div class="chart-title">
-            title <br><br>
+
+
           </div>
           <div class="chart-stage">
             <img data-src="holder.js/100%x150/white">
           </div>
-          <div class="chart-notes">
-            Notes go down here
-          </div>
+
         </div>
       </div>
 
     </div>
 
     <script type="text/javascript">
-       window.onload = setTimeout(function() { c1.checked = 1 }, 200)
-       window.onload = setTimeout(function() { c2.checked = 1 }, 500)
-       window.onload = setTimeout(function() { c3.checked = 1 }, 800)
-       window.onload = setTimeout(function() { document.getElementById("policy_score").classList.remove('hide') }, 800)
+       var refresh_policy = function(mask) {
+         mask = [1,1,0,0];
+
+         setTimeout(function() { c1.checked = 1 ; c1.indeterminate = mask[0]}, 200)
+         setTimeout(function() { c2.checked = 1 ; c2.indeterminate = mask[1]}, 500)
+         setTimeout(function() { c3.checked = 1; c3.indeterminate = mask[2]}, 800)
+         setTimeout(function() { c4.checked = 1; c4.indeterminate = mask[3]}, 1000)
+         setTimeout(function() { document.getElementById("policy_score").classList.remove('hide') }, 1000)
+       }
+       window.onload = function() {mask = [1,1,1,0]};
+       window.onload = refresh_policy;
+
+       //window.onload = setTimeout(function() { c1.checked = 1 }, 200)
+      // window.onload = setTimeout(function() { c2.checked = 1 }, 500)
+       //window.onload = setTimeout(function() { c3.checked = 1 }, 800)
+       //window.onload = setTimeout(function() { c4.checked = 1 }, 1000)
+       //window.onload = setTimeout(function() { document.getElementById("policy_score").classList.remove('hide') }, 1000)
     </script>
 
 </body>

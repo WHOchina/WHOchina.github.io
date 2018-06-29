@@ -9,18 +9,26 @@ body {
   align-content: center;
 }
 
-h1 {
+h3 {
   font-weight: 200;
   font-size: 3em;
   margin: 0 0 0.1em 0;
   text-align: center;
 }
 
+h1 {
+  font-weight: 200;
+  font-size: 1.8em;
+  margin: 0 0 0.1em 0;
+  text-align: center;
+  color: #5d5959;
+}
+
 h2 {
   font-weight: 200;
-  font-size: 0.9em;
+  font-size: 1em;
   margin: 0 0 0px;
-  color: #999;
+  color: #7c7878;
   text-align: center;
 }
 
@@ -31,11 +39,11 @@ a {
 }
 
 .button1 {
-    background-color: #b3e6ff;
-    border: 2px solid #206993;
+    background-color: #bde8fc;
+    border: 1px solid #206993;
     border-radius: 8%;
     color: #206993;
-    padding: 3px;
+    padding: 2px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -46,34 +54,34 @@ a {
 }
 .button1:hover {
     background-color: #c4e7f9;
-    border: 2px solid #074e78;
+    border: 1px solid #074e78;
 }
 .button1:focus {
     background-color: #c4e7f9;
-    border: 2px solid #074e78;
+    border: 1px solid #074e78;
 }
 
 .button2 {
-    background-color: #f7c74b;
-    border: 2px solid #e79f26;
+    background-color: #fcdd8c;
+    border: 1px solid #e79f26;
     border-radius: 8%;
     color: #ad6d00;
-    padding: 3px ;
+    padding: 2px ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     width: 75px;
 }
 .button2:hover {
   background-color: #f5d789;
-  border: 2px solid #b87506;
+  border: 1px solid #b87506;
 }
 .button2:focus {
   background-color: #f5d789;
-  border: 2px solid #b87506;
+  border: 1px solid #b87506;
 }
 
 .center {
@@ -93,7 +101,7 @@ ol {
 
 ol li {
   position: relative;
-  font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+  font: bold italic 35px/1.5 Helvetica, Verdana, sans-serif;
   margin-bottom: 20px;
 }
 
@@ -104,7 +112,7 @@ li p {
 }
 
 li p2 {
-  font: 24px/1.5 Helvetica, sans-serif;
+  font: 16px/1.5 Helvetica, sans-serif;
   padding-left: 20px;
   color: #555;
 
@@ -115,11 +123,11 @@ span {
 }
 
 .w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
-.w3-animate-top{position:relative;animation:animatetop 0.5s}@keyframes animatetop{0%{top:-100px;opacity:0} 50%{top:-100px;opacity:0} 100%{top:0;opacity:1}}
+.w3-animate-top{position:relative;animation:animatetop 0.5s}@keyframes animatetop{0%{top:-10px;opacity:0} 50%{top:-10px;opacity:0} 100%{top:0;opacity:1}}
 
 /* checkbox stuff */
 html {
-  font-size: 50px;
+  font-size: 45px;
 
 }
 
@@ -174,90 +182,42 @@ label:before {
   top: -1rem;
 }
 
-input[type=checkbox]:checked + label {
+input[type=checkbox]:indeterminate + label {
   background: #e45339;
 }
-input[type=checkbox]:checked + label:after {
-  top: 50%;
+input[type=checkbox]:indeterminate + label:after {
+  top: 52%;
   margin-top: -0.07rem;
   left: 0.2rem;
   opacity: 1;
 }
-input[type=checkbox]:checked + label:before {
-  top: 50%;
+input[type=checkbox]:indeterminate + label:before {
+  top: 52%;
   margin-top: -0.07rem;
   left: 0.6rem;
   margin-left: -0.42rem;
   opacity: 1;
 }
 
-
-/*
-input[type=checkbox] {
-  display: none;
-}
-
-.overflow {
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  background: none;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -0.2rem);
-  border: 0.2rem solid #E6E6E6;
-  z-index: 1;
-}
-
-label {
-  margin: 10px auto;
-  overflow: hidden;
-  background: gray;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-label:before, label:after {
-  position: absolute;
-  display: block;
-  content: '';
-  background: #fff;
-  border-radius: 0.1rem;
-  transition: all 0.4s;
-  opacity: 0;
-}
-label:after {
-  transform: rotate(-45deg);
-  width: 0.6rem;
-  height: 0.1rem;
-  top: -1rem;
-  right: -1rem;
-}
-label:before {
-  transform: rotate(45deg);
-  width: 0.3rem;
-  height: 0.1rem;
-  left: -1rem;
-  top: -1rem;
-}
+/* checked state */
 
 input[type=checkbox]:checked + label {
   background: #5dd736;
 }
 input[type=checkbox]:checked + label:after {
-  top: 50%;
+  top: 53%;
   margin-top: -0.05rem;
-  left: 0.25rem;
+  left: 0.30rem;
   opacity: 1;
+
 }
 input[type=checkbox]:checked + label:before {
-  top: 0.6rem;
+  top: 0.62rem;
   margin-top: -0.05rem;
-  left: 0.55rem;
-  margin-left: -0.4rem;
+  left: 0.82rem;
+  margin-left: -0.7rem;
   opacity: 1;
+  width: 0.4rem;
 }
-*/
+
+/* testing new class */
