@@ -221,3 +221,52 @@ input[type=checkbox]:checked + label:before {
 }
 
 /* testing new class */
+
+/*styling for overview sections */
+img {
+  max-width: 100%;
+  margin: 0 1rem 1rem;
+  border-radius: 5px;
+}
+
+.start_msg{
+    background-color: #aacbff;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: .875em; /* 15px */
+    padding: 10px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 70%;
+    margin: auto;
+}
+
+.middle_msg1{
+  background-color: #dee5ff;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875em; /* 15px */
+  padding: 10px 20px;
+  border-left: 1px black;
+  border-right: 1px black;
+  width: 70%;
+  margin: auto;
+}
+
+.middle_msg2{
+  background-color: #aacbff;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875em; /* 15px */
+  padding: 10px 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.end_msg{
+    background-color: #dee5ff;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: .875em; /* 15px */
+    padding: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 70%;
+    margin: auto;
+}
